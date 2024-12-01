@@ -1,4 +1,4 @@
-### Task Manager with Google Authentication
+# Task Manager with Google Authentication
 Overview
 This is a Django-based Task Manager application that allows users to create, edit, and manage tasks. It also features user authentication, including Google sign-in via OAuth integration.
 
