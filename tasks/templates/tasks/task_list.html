@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task List</title>
+</head>
+<body>
+    <h1>Your Tasks</h1>
+    <ul>
+        {% for task in tasks %}
+            <li>
+                <strong>{{ task.title }}</strong><br>
+                {{ task.description }}<br>
+                <a href="{% url 'task_edit' task.pk %}">Edit</a> |
+                <a href="{% url 'task_delete' task.pk %}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'task_create' %}">Create New Task</a>
+
+    <!-- Logout link here -->
+    <nav>
+        <ul>
+            <li><a href="{% url 'account_logout' %}">Logout</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>
